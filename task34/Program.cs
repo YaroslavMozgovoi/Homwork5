@@ -27,16 +27,17 @@ void PrintArray(int[] array) //Вывод массива на печать
     Console.WriteLine("]");
 }
 
-void CollEvenNumbers(int[] array)
+int CollEvenNumbers(int[] array)
 {
     int coll = 0;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] % 2 == 0) coll = coll + 1;
     }
-    Console.WriteLine($"количество чётных чисел в массиве = {coll}");
+    return coll;
 }
 
 int[] createArray = CreateArray(20);
 PrintArray(createArray);
-CollEvenNumbers(createArray);
+int coll = CollEvenNumbers(createArray);
+Console.WriteLine($"Количество чётных чисел в массиве = {coll}");
