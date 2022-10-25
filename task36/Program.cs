@@ -29,10 +29,10 @@ void PrintArray(int[] array) //Вывод массива на печать
 
 void SumAddAlement(int[] array)
 {
-    int sum = array[0];
-    for (int i = 0; i < array.Length; i++)
+    int sum = 0;
+    for (int i = 0; i < array.Length; i = i+2)
     {
-        if(i%2==1)sum=sum+array[i];
+        sum = sum + array[i];
     }
     Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях = {sum}");
 } 
